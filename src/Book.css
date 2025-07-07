@@ -1,0 +1,28 @@
+.main {
+  padding: 20px;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main.light {
+  background-color: azure;
+  color: black;
+}
+
+.main.dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+#radio {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#radio label {
+  cursor: pointer;
+  font-weight: bold;
+}
