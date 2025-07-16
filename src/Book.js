@@ -1,37 +1,23 @@
-import './Book.css'
-import React, { useState } from 'react'
+import React from 'react';
+import './Book.css';
+import { Link } from 'react-router-dom';
+import shevchenkoImg from './shevchenko.jpg';
 
-export function Book(props) {
-
-    const [theme, setTheme] = useState('light');
-
-    const handleThemeChange = (event) => { setTheme(event.target.value)};
-
-    return  <div className={`main ${theme}`}>
-        <div id="radio">
-            <label>
-            <input
-                type="radio"
-                name="theme"
-                value="dark"
-                checked={theme === 'dark'}
-                onChange={handleThemeChange}
-            />
-            Dark
-            </label>
-            <label>
-            <input
-                type="radio"
-                name="theme"
-                value="light"
-                checked={theme === 'light'}
-                onChange={handleThemeChange}
-            />
-            Light
-            </label>
-        </div>
-        <p>{props.text}</p>
+export function Book() {
+  return (
+    <div className="book-content">
+      <img src={shevchenkoImg} alt="Тарас Шевченко" className="portrait" />
+      <h2 className="center">Тарас Шевченко</h2>
+      <p>
+        Тарас Григорович Шевченко — видатний український поет, художник, мислитель і борець за волю народу.
+        Він народився в селі Моринці, згодом став одним з найвизначніших представників української літератури.
+        Його творчість справила великий вплив на розвиток української мови та національної свідомості. 
+        Він автор "Кобзаря", численних поем, картин і щоденників.
+      </p>
+      <p>
+        Шевченко був засланий у солдати через свої вірші, які критикували царизм. Після заслання продовжив 
+        творити й залишив по собі глибокий культурний слід. Також читайте про <Link to="/franko">Івана Франка</Link>.
+      </p>
     </div>
-
-    
+  );
 }

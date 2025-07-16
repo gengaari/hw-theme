@@ -1,28 +1,12 @@
-.main {
+.book-content {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  font-family: sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
 }
 
-.main.light {
-  background-color: azure;
-  color: black;
-}
-
-.main.dark {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-#radio {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-#radio label {
-  cursor: pointer;
-  font-weight: bold;
+.book-content p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 10px;
 }
